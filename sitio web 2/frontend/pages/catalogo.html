@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo de Libros</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../img/logo.png" alt="Logo">
+        </div>
+        <nav class="nav-buttons">
+            <a href="registro_libros.html" class="btn">REGISTRO LIBROS</a>
+            <button onclick="logout()" class="btn">SALIR</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="catalogo-controls">
+            <input type="text" placeholder="CATEGORÍA" id="filtro-categoria" style="padding: 8px; width: 200px;">
+            <button class="btn">BOTÓN DE BÚSQUEDA</button>
+        </section>
+
+        <section class="grid-catalog" id="grid-libros">
+            <!-- Renderizado dinámico desde BD -->
+        </section>
+
+        <section style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="formulario_prestamo.html" class="btn">LISTA</a>
+            <a href="formulario_prestamo.html" class="btn">REALIZAR PRÉSTAMO</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Biblioteca Internacional | Información de la Institución</p>
+    </footer>
+    <script src="../scripts/prestamos.js"></script>
+</body>
+</html>

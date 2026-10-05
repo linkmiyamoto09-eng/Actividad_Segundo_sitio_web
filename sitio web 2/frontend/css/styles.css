@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    --taupe: #93827f;
+    --cream: #f3f9d2;
+    --dry-sage: #bdc4a7;
+    --graphite: #2f2f2f;
+    --muted-teal: #92b4a7;
+    --font-main: 'Libre Caslon Condensed', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--cream);
+    color: var(--graphite);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Nav Layout */
+header {
+    background-color: var(--graphite);
+    color: var(--cream);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header img.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--muted-teal);
+    object-fit: cover;
+}
+
+nav a {
+    color: var(--cream);
+    text-decoration: none;
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--taupe);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--muted-teal);
+}
+
+/* Layout General */
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 2px solid var(--graphite);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.category-list, .grid-catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.category-item {
+    background-color: var(--dry-sage);
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    border: 1px solid var(--graphite);
+    border-radius: 6px;
+}
+
+.grid-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.book-card {
+    background-color: var(--muted-teal);
+    border: 2px solid var(--graphite);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.5rem;
+    user-select: none;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--graphite);
+    border-radius: 4px;
+    background-color: var(--cream);
+    font-family: var(--font-main);
+    font-size: 1rem;
+}
+
+.btn {
+    background-color: var(--taupe);
+    color: var(--cream);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+}
+
+.btn:hover {
+    background-color: var(--graphite);
+}
+
+.btn-danger {
+    background-color: #a84242;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--dry-sage);
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--graphite);
+    color: var(--cream);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}

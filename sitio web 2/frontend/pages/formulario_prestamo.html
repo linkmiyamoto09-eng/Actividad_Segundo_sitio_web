@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuestionario de Préstamos</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../img/logo.png" alt="Logo">
+        </div>
+    </header>
+
+    <main>
+        <h2>CUESTIONARIO DE PRÉSTAMOS</h2>
+        <section id="libros-solicitados-box" style="border:1px solid #000; padding:10px; margin-bottom: 20px; background: var(--dry-sage);">
+            <h3>LISTA DE LIBROS SOLICITADOS</h3>
+            <ul id="lista-seleccionados" style="padding-left: 20px; margin-top: 10px;"></ul>
+        </section>
+
+        <form id="form-prestamo">
+            <div class="form-group">
+                <label>NOMBRE COMPLETO</label>
+                <input type="text" id="cliente_nombre" required>
+            </div>
+            <div class="form-group">
+                <label>EDAD</label>
+                <input type="number" id="cliente_edad" required>
+            </div>
+            <div class="form-group">
+                <label>SEXO</label>
+                <select id="cliente_sexo">
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>DIRECCIÓN</label>
+                <input type="text" id="cliente_direccion" required>
+            </div>
+            <button type="submit" class="btn">FINALIZAR PRÉSTAMO</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Biblioteca Internacional | Información de la Institución</p>
+    </footer>
+    <script src="../scripts/prestamos.js"></script>
+</body>
+</html>

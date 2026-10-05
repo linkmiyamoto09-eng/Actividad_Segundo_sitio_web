@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Administración de Empleados</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../img/logo.png" alt="Logo">
+        </div>
+        <nav class="nav-buttons">
+            <button onclick="logout()" class="btn">CERRAR SESIÓN</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lista-empleados">
+            <h3>LISTA DE EMPLEADOS COMUNES</h3>
+            <div id="empleados-container" style="margin-top: 1rem;">
+                <!-- Se llena mediante JS dinamico -->
+            </div>
+        </section>
+
+        <section id="alta-empleado" style="margin-top: 2rem;">
+            <form id="form-empleado">
+                <div class="form-group">
+                    <label>NOMBRE COMPLETO</label>
+                    <input type="text" id="nombre_empleado" required>
+                </div>
+                <div class="form-group">
+                    <label>CORREO ELECTRÓNICO</label>
+                    <input type="email" id="correo_empleado" required>
+                </div>
+                <div class="form-group">
+                    <label>CONTRASEÑA</label>
+                    <input type="password" id="pass_empleado" required>
+                </div>
+                <button type="submit" class="btn">AGREGAR EMPLEADO</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Biblioteca Internacional | Información de la Institución</p>
+    </footer>
+    <script src="../scripts/app.js"></script>
+</body>
+</html>

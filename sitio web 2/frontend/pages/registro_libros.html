@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Libros</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../img/logo.png" alt="Logo">
+        </div>
+        <nav class="nav-buttons">
+            <a href="catalogo.html" class="btn">VOLVER AL CATÁLOGO</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>REGISTRO DE LIBRO</h2>
+        <form id="form-nuevo-libro">
+            <div class="form-group">
+                <label>TÍTULO</label>
+                <input type="text" id="libro_titulo" required>
+            </div>
+            <div class="form-group">
+                <label>CATEGORÍA</label>
+                <select id="libro_categoria">
+                    <option value="1">Terror</option>
+                    <option value="2">Ciencia</option>
+                    <option value="3">Fantasía</option>
+                    <option value="4">Comedia</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>AUTOR</label>
+                <input type="text" id="libro_autor" required>
+            </div>
+            <div class="form-group">
+                <label>ISBN</label>
+                <input type="text" id="libro_isbn" required>
+            </div>
+            <button type="submit" class="btn">REGISTRAR</button>
+        </form>
+
+        <section style="margin-top: 2rem;">
+            <h3>LISTA DE LIBROS EN CATÁLOGO</h3>
+            <div id="lista-libros-eliminar" style="margin-top: 1rem;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Biblioteca Internacional | Información de la Institución</p>
+    </footer>
+    <script src="../scripts/app.js"></script>
+</body>
+</html>

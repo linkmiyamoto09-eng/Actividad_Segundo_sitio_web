@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Libro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="Logo Biblioteca" class="logo">
+            <h1>REGISTRO DE LIBRO</h1>
+        </div>
+        <nav>
+            <a href="catalogo.html">CATÁLOGO</a>
+            <button onclick="cerrarSesion()">CERRAR SESIÓN</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <article>
+                <h2>REGISTRAR NUEVO LIBRO</h2>
+                <form id="form-registro-libro">
+                    <div class="form-group">
+                        <label for="titulo">TÍTULO:</label>
+                        <input type="text" id="titulo" name="titulo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="categoria_id">CATEGORÍA:</label>
+                        <select id="categoria_id" name="categoria_id" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="autor">AUTOR:</label>
+                        <input type="text" id="autor" name="autor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="isbn">ISBN:</label>
+                        <input type="text" id="isbn" name="isbn" required>
+                    </div>
+                    <button type="submit" class="btn">REGISTRAR</button>
+                </form>
+            </article>
+        </section>
+
+        <section class="card">
+            <article>
+                <h3>LISTA DE LIBROS REGISTRADOS</h3>
+                <div id="lista-libros-existentes" style="margin-top: 1rem;"></div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Biblioteca Internacional. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', cargarModuloRegistroLibros);
+    </script>
+</body>
+</html>
